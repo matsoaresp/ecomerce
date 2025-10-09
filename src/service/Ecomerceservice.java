@@ -62,7 +62,7 @@ public class Ecomerceservice {
                 logger.severe("\u001B[31m[ERROR] Entrada invalida. Por favor, insira os dados corretamente: " + e.getMessage() + "\u001B[0m");
                 e.printStackTrace();
             } catch (Exception e) {
-                logger.severe("\u001B[31m[ERROR] Erro ao adicionar produtos: " + e.getMessage() + "\u001B[0m");
+                logger.severe("\u001B[31m[ERROR] Erro ao adicionar produtoss: " + e.getMessage() + "\u001B[0m");
             }
     }
     public String getMessage(Scanner sc, String mensagem){
