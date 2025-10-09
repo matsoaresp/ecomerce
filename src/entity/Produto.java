@@ -13,9 +13,6 @@ public abstract class Produto {
     }
 
     public Produto() {
-        this.nome = "";
-        this.quantidade = 0;
-        this.preco = 0.0;
     }
 
     public String getNome() {
