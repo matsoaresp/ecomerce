@@ -9,5 +9,8 @@ public class Eletronico extends  Produto{
     public Eletronico() {
     }
 
-
+    @Override
+    public String toString() {
+        return "Eletronico = " +" Nome: "+getNome() + " Preço: "+ getPreco() + " Quantidade: "+ getQuantidade();
+    }
 }
