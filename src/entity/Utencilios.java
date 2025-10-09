@@ -8,4 +8,9 @@ public class Utencilios extends Produto{
 
     public Utencilios() {
     }
+
+    @Override
+    public String toString() {
+        return "Utencilios = " +" Nome: "+getNome() + " Preço: "+ getPreco() + " Quantidade: "+ getQuantidade();
+    }
 }

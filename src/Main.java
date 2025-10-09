@@ -1,20 +1,14 @@
-import entity.Produto;
-import service.Ecomerceservice;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import service.Ecomerceservice;
+import utils.LoggerUtils;
+
 
 public class Main {
     public static void main(String[] args) {
 
-        // Cria o serviço de e-commerce
+        LoggerUtils.staticLoggerUtils();
         Ecomerceservice ecomerceservice = new Ecomerceservice();
-
-        // Adiciona produtos
         ecomerceservice.addProduto();
-
-        // Exibe a lista de produtos (você precisa implementar este método)
-        ecomerceservice.getProdutoslist();
+        ecomerceservice.getProdutos();
     }
 }

@@ -9,5 +9,8 @@ public class Roupas extends Produto{
     public Roupas() {
     }
 
-
+    @Override
+    public String toString() {
+        return "Roupas = "+ " Nome: "+getNome() + " Preço: "+ getPreco() + " Quantidade: "+ getQuantidade();
+    }
 }
