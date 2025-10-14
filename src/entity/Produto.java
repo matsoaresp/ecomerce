@@ -39,4 +39,8 @@ public abstract class Produto {
         this.quantidade = quantidade;
     }
 
+    public abstract void exibirDetalhes();
+
+
+
 }
