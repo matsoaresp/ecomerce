@@ -10,7 +10,8 @@ public class Utencilios extends Produto{
     }
 
     @Override
-    public String toString() {
-        return "Utencilios = " +" Nome: "+getNome() + " Preço: "+ getPreco() + " Quantidade: "+ getQuantidade();
+    public void exibirDetalhes() {
+        System.out.println("Utencilios = " +" Nome: "+getNome() + " Preço: "+ getPreco() + " Quantidade: "+ getQuantidade());
     }
+
 }

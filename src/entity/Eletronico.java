@@ -10,7 +10,9 @@ public class Eletronico extends  Produto{
     }
 
     @Override
-    public String toString() {
-        return "Eletronico = " +" Nome: "+getNome() + " Preço: "+ getPreco() + " Quantidade: "+ getQuantidade();
+    public void exibirDetalhes() {
+        System.out.println("Eletronico = " +" Nome: "+getNome() + " Preço: "+ getPreco() + " Quantidade: "+ getQuantidade());
     }
+
+
 }
