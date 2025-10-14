@@ -10,7 +10,8 @@ public class Roupas extends Produto{
     }
 
     @Override
-    public String toString() {
-        return "Roupas = "+ " Nome: "+getNome() + " Preço: "+ getPreco() + " Quantidade: "+ getQuantidade();
+    public void exibirDetalhes() {
+        System.out.println("Roupas = " +" Nome: "+getNome() + " Preço: "+ getPreco() + " Quantidade: "+ getQuantidade());
     }
+
 }

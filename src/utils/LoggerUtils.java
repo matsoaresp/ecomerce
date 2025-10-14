@@ -7,8 +7,6 @@ import java.util.logging.Logger;
 
 public class LoggerUtils {
 
-    private static final Logger logger = Logger.getLogger(LoggerUtils.class.getName());
-
     public static void staticLoggerUtils() {
         Logger rootLogger = Logger.getLogger("");
         rootLogger.setLevel(Level.ALL);

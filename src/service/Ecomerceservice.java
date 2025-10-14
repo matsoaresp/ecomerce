@@ -1,8 +1,7 @@
 package service;
-
 import entity.Eletronico;
 import entity.Produto;
-
+import utils.LoggerUtils;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -17,6 +16,7 @@ public class Ecomerceservice {
     private final List<Produto> produtoslist;
 
     public Ecomerceservice() {
+        LoggerUtils.staticLoggerUtils();
         this.produtoslist = new ArrayList<>();
     }
 
@@ -45,6 +45,15 @@ public class Ecomerceservice {
             logger.severe("\u001B[31m[ERROR] Erro ao adicionar produtos: " + e.getMessage() + "\u001B[0m");
 
         }
+    }
+
+
+    public void escolherOpcao ( ){
+
+
+
+
+
     }
     public List<Produto> getProdutos() {
         if (produtoslist == null || produtoslist.isEmpty()) {
