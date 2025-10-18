@@ -1,6 +1,7 @@
 package service;
 import entity.Eletronico;
 import entity.Produto;
+import service.EletronicoService;
 import utils.LoggerUtils;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -46,34 +47,46 @@ public class Ecomerceservice {
 
         }
     }
+        public void switchOption (Scanner sc){
+        try {
+            EletronicoService eletronico = new EletronicoService();
+            RoupasService roupas = new RoupasService();
 
+            System.out.println("Escolha uma opção:");
+            System.out.println("1 - Adicionar Eletrônico");
+            System.out.println("2 - Adicionar Roupas");
+            System.out.print("Digite sua opção: ");
 
-    public void escolherOpcao ( ){
+            int opcao = sc.nextInt();
+            switch (opcao) {
 
-
-
-
-
-    }
-    public List<Produto> getProdutos() {
-        if (produtoslist == null || produtoslist.isEmpty()) {
-            logger.warning("\u001B[33m[WARNING] A lista de produtos esta vazia.\u001B[0m");
-        } else {
-            logger.info("\u001B[32m[INFO] Lista de produtos obtida com sucesso.\u001B[0m");
+                case 1:
+                    eletronico.adicionarEletronico();
+                    break;
+                case 2:
+                    roupas.adicionarRoupas();
+                    break;
+                    default:
+            }
+        }catch (Exception e){
+            logger.severe("Erro no sistema"+ e.getMessage());
+        }
         }
 
-        System.out.println("Produtos da loja:");
-        for (Produto produto : produtoslist) {
-            System.out.println("Nome: " + produto.getNome() +
-                    ", Quantidade: " + produto.getQuantidade() +
-                    ", Preco: " + produto.getPreco());
-        }
-        return produtoslist;
+        public List<Produto> getProdutos () {
+            if (produtoslist == null || produtoslist.isEmpty()) {
+                logger.warning("\u001B[33m[WARNING] A lista de produtos esta vazia.\u001B[0m");
+            } else {
+                logger.info("\u001B[32m[INFO] Lista de produtos obtida com sucesso.\u001B[0m");
+            }
+
+            System.out.println("Produtos da loja:");
+            for (Produto produto : produtoslist) {
+                System.out.println("Nome: " + produto.getNome() +
+                        ", Quantidade: " + produto.getQuantidade() +
+                        ", Preco: " + produto.getPreco());
+            }
+            return produtoslist;
+
     }
-
-
-
-
-
-
 }

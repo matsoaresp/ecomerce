@@ -20,7 +20,8 @@ public class EletronicoService {
     }
 
     public void adicionarEletronico() {
-        try (Scanner sc = new Scanner(System.in)) {
+        try  {
+            Scanner sc = new Scanner(System.in);
             logger.info("\u001B[32m[INFO] Opcao de adicionar eletronicos\u001B[0m");
             System.out.println("Quantos eletronicos deseja inserir?");
             int quantidadeEletronicos = sc.nextInt();
