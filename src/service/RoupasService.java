@@ -23,7 +23,8 @@ public class RoupasService {
 
     public void adicionarRoupas() {
 
-        try (Scanner sc = new Scanner(System.in)) {
+        try  {
+            Scanner sc = new Scanner(System.in);
             if (roupasList == null || roupasList.isEmpty()) {
                 logger.warning("\u001B[33m[WARNING] A lista de roupas esta vazia.\u001B[0m");
             } else {
