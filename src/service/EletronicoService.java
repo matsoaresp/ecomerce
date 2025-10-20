@@ -31,14 +31,14 @@ public class EletronicoService {
                 String nome = getMessage(sc,"Qual o nome do eletronico?");
                 int quantidade = getIntMessage(sc,"Qual a quantidade do eletronico?");
                 double preco = getDoubleMessage(sc,"Qual o preco do eletronico?");
-                sc.nextLine();
-
                 eletronicosList.add(new Eletronico(nome, quantidade, preco));
             }
         } catch (InputMismatchException e ){
             logger.severe("\u001B[31m[ERROR] Entrada invalida. Por favor, insira os dados corretamente: " + e.getMessage() + "\u001B[0m");
+            throw e;
         } catch (Exception e) {
             logger.severe("\u001B[31m[ERROR] Erro ao adicionar eletronicos: " + e.getMessage() + "\u001B[0m");
+            throw e;
         }
     }
 

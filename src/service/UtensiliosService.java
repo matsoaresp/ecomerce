@@ -2,7 +2,7 @@ package service;
 
 import entity.Utencilios;
 import utils.LoggerUtils;
-import utils.InputUtils;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -11,12 +11,12 @@ import java.util.logging.Logger;
 
 import static utils.InputUtils.*;
 
-public class UtencioliosService {
+public class UtensiliosService {
 
-    private static final Logger logger = Logger.getLogger(UtencioliosService.class.getName());
+    private static final Logger logger = Logger.getLogger(UtensiliosService.class.getName());
     private final List<Utencilios> utencilios;
 
-    public UtencioliosService() {
+    public UtensiliosService() {
         LoggerUtils.staticLoggerUtils();
         this.utencilios = new ArrayList<>();
 
@@ -32,7 +32,6 @@ public class UtencioliosService {
                 String nome = getMessage(sc, "Informe o nome do produto: ");
                 int quantidade = getIntMessage(sc, "Informe a quantidade do produto: ");
                 double valor = getDoubleMessage(sc, "Informe o valor do produto: ");
-                sc.nextLine();
                 utencilios.add(new Utencilios(nome, quantidade, valor));
             }
         }catch (InputMismatchException e){
