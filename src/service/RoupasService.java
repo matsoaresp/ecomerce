@@ -37,7 +37,6 @@ public class RoupasService {
                 String nome = getMessage(sc,"Insira o nome do Roupa ");
                 int quantidade = getIntMessage(sc,"Insira a quantidade do Roupa ");
                 double preco = getDoubleMessage(sc,"Informe o valor do Roupa ");
-                sc.nextLine();
                 roupasList.add(new Roupas (nome,quantidade,preco));
             }
         }catch (InputMismatchException e) {
